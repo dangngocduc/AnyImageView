@@ -13,7 +13,7 @@ repositories {
 
 thêm trong  _dependencies_
 ```groovy
-compile compile 'android.dangngocduc:anyimageview:1.2.0' 
+compile 'android.dangngocduc:anyimageview:1.1.1'  
 ```
 ### Cách dùng :    
 ```xml
@@ -25,6 +25,6 @@ compile compile 'android.dangngocduc:anyimageview:1.2.0'
     />
 ```
 ### demo  
-![](https://cloud.githubusercontent.com/assets/10508979/15991294/fb340f2a-30d8-11e6-8252-c0af2c41d1fb.png)
+![](https://raw.githubusercontent.com/dangngocduc/AnyImageView/master/demo/circle_image.png)
 
 
