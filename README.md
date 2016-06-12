@@ -13,13 +13,18 @@ repositories {
 
 thêm trong  _dependencies_
 ```groovy
-compile 'android.dangngocduc:anyimageview:1.1.0'  
+compile 'android.dangngocduc:anyimageview:1.1.1'  
 ```
 ### Cách dùng :    
-Viết ở đây  
+```xml
+   <android.dangngocduc.anyimageview.CircleImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/avatar"
+    />
+```
 ### demo  
-![](http://voz.vn/wp-content/uploads/2016/02/Samsung-Galaxy-S7-Edge-UX-2-840x561-600x401.jpg)
+![](https://cloud.githubusercontent.com/assets/10508979/15991294/fb340f2a-30d8-11e6-8252-c0af2c41d1fb.png)
 
 
-
- 
