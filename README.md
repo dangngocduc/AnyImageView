@@ -1,18 +1,20 @@
 # AnyImageView
-Đây là 1 bộ thư viện hỗ trợ custommize ImageView trong android   
+ Đây là 1 bộ thư viện hỗ trợ custommize ImageView trong android   
 ### Cài đặt  
-_file app.grandle_  
-> repositories {   
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;maven {  
-       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; url 'https://dl.bintray.com/dangngocduc/maven'  
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}  
-}  
+_file app.grandle_
+```groovy 
+repositories {
+     maven {
+        url 'https://dl.bintray.com/dangngocduc/maven'
+    }
+}
 
-
-thêm trong  _dependencies_  
-> compile 'android.dangngocduc:anyimageview:1.0.0'    
-
-
+```
+>
+thêm trong  _dependencies_
+```groovy
+compile 'android.dangngocduc:anyimageview:1.0.0'  
+```
 ### Cách dùng :    
 Viết ở đây  
 ### demo  
