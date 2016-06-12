@@ -1,7 +1,7 @@
 # AnyImageView
- Đây là 1 bộ thư viện hỗ trợ custommize ImageView trong android   
-### Cài đặt  
-_file app.grandle_
+ A library Android support custommize ImageView . 
+### setup 
+in your file gradle  : 
 ```groovy 
 repositories {
      maven {
@@ -11,11 +11,11 @@ repositories {
 
 ```
 
-thêm trong  _dependencies_
+add line below  to  _dependencies_
 ```groovy
 compile 'android.dangngocduc:anyimageview:1.1.1'  
 ```
-### Cách dùng :    
+### Usage
 ```xml
    <android.dangngocduc.anyimageview.CircleImageView
         android:layout_width="200dp"
@@ -24,7 +24,7 @@ compile 'android.dangngocduc:anyimageview:1.1.1'
         android:src="@drawable/avatar"
     />
 ```
-### demo  
+# Demo  
 ![](https://raw.githubusercontent.com/dangngocduc/AnyImageView/master/demo/circle_image.png)
 
 
