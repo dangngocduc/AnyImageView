@@ -10,7 +10,7 @@ repositories {
 }
 
 ```
->
+
 thêm trong  _dependencies_
 ```groovy
 compile 'android.dangngocduc:anyimageview:1.0.0'  
