@@ -16,6 +16,7 @@ add line below  to  _dependencies_
 compile 'android.dangngocduc:anyimageview:1.1.1'  
 ```
 ### Usage
+**1. _CircleImageView_**
 ```xml
    <android.dangngocduc.anyimageview.CircleImageView
         android:layout_width="200dp"
