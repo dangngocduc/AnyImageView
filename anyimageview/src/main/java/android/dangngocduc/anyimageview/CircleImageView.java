@@ -63,9 +63,7 @@ public class CircleImageView  extends ImageView {
                 && drawable instanceof VectorDrawable) {
             ((VectorDrawable) drawable).draw(canvas);
             b = Bitmap.createBitmap(canvas.getWidth(), canvas.getHeight(), Bitmap.Config.ARGB_8888);
-            Canvas c = new Canvas();
-            c.setBitmap(b);
-            drawable.draw(c);
+
         }
         else {
             b = ((BitmapDrawable) drawable).getBitmap();
@@ -74,17 +72,41 @@ public class CircleImageView  extends ImageView {
         Bitmap bitmap = b.copy(Bitmap.Config.ARGB_8888, true);
 
         int w = getWidth(), h = getHeight();
+        Bitmap roundBitmap;
+if(h>w)
+{
+    roundBitmap =  getCroppedBitmap(bitmap, w);
+}
+        else          {
+    roundBitmap =  getCroppedBitmap(bitmap, h);
+}
 
-        Bitmap roundBitmap =  getCroppedBitmap(bitmap, w);
         canvas.drawBitmap(roundBitmap, 0,0, null);
     }
 
     public static Bitmap getCroppedBitmap(Bitmap bmp, int radius) {
         Bitmap sbmp;
-        if(bmp.getWidth() != radius || bmp.getHeight() != radius)
-            sbmp = Bitmap.createScaledBitmap(bmp, radius, radius, false);
+        if(bmp.getWidth() != radius || bmp.getHeight() != radius){
+            if(bmp.getWidth()<bmp.getHeight()){
+                sbmp = Bitmap.createScaledBitmap(bmp, radius, radius*bmp.getHeight()/bmp.getWidth(), false);
+            }  else {
+
+                sbmp = Bitmap.createScaledBitmap(bmp,  radius*bmp.getWidth()/bmp.getHeight(),radius, false);
+
+
+            }
+
+        }
+
         else
             sbmp = bmp;
+        if(sbmp.getHeight()>sbmp.getWidth()){
+            sbmp=Bitmap.createBitmap(sbmp,0,(sbmp.getHeight()-sbmp.getWidth())/2,sbmp.getWidth(),sbmp.getWidth());
+        } else{
+            sbmp=Bitmap.createBitmap(sbmp,(sbmp.getWidth()-sbmp.getHeight())/2,0,sbmp.getHeight(),sbmp.getHeight());
+
+        }
+
         Bitmap output = Bitmap.createBitmap(sbmp.getWidth(),
                 sbmp.getHeight(), Bitmap.Config.ARGB_8888);
         Canvas canvas = new Canvas(output);
@@ -98,8 +120,13 @@ public class CircleImageView  extends ImageView {
         paint.setDither(true);
         canvas.drawARGB(0, 0, 0, 0);
         paint.setColor(Color.parseColor("#BAB399"));
-        canvas.drawCircle(sbmp.getWidth() / 2+0.7f, sbmp.getHeight() / 2+0.7f,
-                sbmp.getWidth() / 2+0.1f, paint);
+
+        if(sbmp.getHeight()>sbmp.getWidth()){
+            canvas.drawCircle(sbmp.getWidth() / 2, sbmp.getHeight() ,
+                    sbmp.getWidth() / 2, paint);
+        } else
+        canvas.drawCircle(sbmp.getWidth() /2, sbmp.getHeight() / 2,
+                sbmp.getHeight() / 2, paint);
         paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_IN));
         canvas.drawBitmap(sbmp, rect, rect, paint);
 
