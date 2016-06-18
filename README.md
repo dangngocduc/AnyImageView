@@ -13,7 +13,7 @@ repositories {
 
 add line below  to  _dependencies_
 ```groovy
-compile 'android.dangngocduc:anyimageview:1.1.1'  
+compile 'android.dangngocduc:anyimageview:1.2.1'
 ```
 ### Usage
 **1. _CircleImageView_**
